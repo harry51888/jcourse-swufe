@@ -109,7 +109,7 @@ DATABASES = {
         'USER': 'jcourse',
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'jcourse'),
         'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
-        'PORT': 5432
+        'PORT': 5433
     }
 }
 
@@ -196,13 +196,15 @@ if DEBUG:
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'http://101.36.111.202:3000',
+    'http://127.0.0.1:3000',
 ]
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
-SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = not DEBUG
 SESSION_COOKIE_HTTPONLY = True
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = not DEBUG
 
 HASH_SALT = os.environ.get('HASH_SALT', '')
 

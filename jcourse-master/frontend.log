@@ -2,20 +2,29 @@
 > jcourse_nextjs@0.1.0 dev
 > next dev
 
+/bin/sh: line 1: yarn: command not found
   ▲ Next.js 13.5.4
   - Local:        http://localhost:3000
   - Environments: .env.local
 
- ✓ Ready in 1934ms
-Browserslist: caniuse-lite is outdated. Please run:
-  npx browserslist@latest --update-db
-  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
- ✓ Compiled /sync in 1435ms (1315 modules)
+ ✓ Ready in 2.1s
+ ○ Compiling /latest ...
+ ✓ Compiled /latest in 4s (1388 modules)
+ ✓ Compiled /courses in 1581ms (1431 modules)
+ ✓ Compiled /point in 2.2s (1620 modules)
+ ✓ Compiled /activity in 1061ms (1624 modules)
+ ✓ Compiled /preference in 993ms (1660 modules)
+ ✓ Compiled /login in 1373ms (1665 modules)
+ ✓ Compiled /write-review in 2.9s (1541 modules)
+ ✓ Compiled /follow-review in 444ms (1545 modules)
+ ✓ Compiled /search in 339ms (1532 modules)
+ ○ Compiling /course/[id] ...
+ ✓ Compiled /course/[id] in 4.6s (2204 modules)
+ ✓ Compiled /404 in 898ms (2188 modules)
+ ✓ Compiled /latest in 510ms (2175 modules)
+ ✓ Compiled /login in 2.4s (2192 modules)
+ ✓ Compiled /404 in 462ms (2186 modules)
+ ✓ Compiled /latest in 350ms (2175 modules)
+ ✓ Compiled /login in 783ms (2192 modules)
+ ✓ Compiled /404 in 264ms (1502 modules)
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- ✓ Compiled /latest in 600ms (1617 modules)
-(node:17814) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)
- ✓ Compiled /follow-review in 190ms (1621 modules)
- ✓ Compiled /courses in 195ms (1631 modules)
- ✓ Compiled /login in 325ms (1673 modules)
- ✓ Compiled /preference in 204ms (1679 modules)

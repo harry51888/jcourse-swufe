@@ -20,6 +20,10 @@ docker-compose -f docker-compose.dev.yml up -d
 echo "⏳ 等待数据库启动..."
 sleep 5
 
+# 激活虚拟环境
+echo "🔧 激活虚拟环境..."
+source venv/bin/activate
+
 # 检查数据库连接
 echo "🔍 检查数据库连接..."
 if ! DJANGO_SETTINGS_MODULE=jcourse.settings python3 -c "

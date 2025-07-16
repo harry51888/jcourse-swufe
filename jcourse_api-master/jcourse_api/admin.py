@@ -236,3 +236,35 @@ class CourseNotificationLevelAdmin(ImportExportModelAdmin):
     list_filter = ('notification_level',)
     search_fields = ('course__code', 'user__username')
     search_help_text = '输入课程代码或用户名'
+
+
+class TeacherEvaluationResource(resources.ModelResource):
+    teacher = fields.Field(attribute='teacher', widget=ForeignKeyWidget(Teacher, 'name'))
+
+    class Meta:
+        model = TeacherEvaluation
+        import_id_fields = ('teacher', 'source_data')
+        exclude = ('id',)
+        skip_unchanged = True
+        report_skipped = False
+        export_order = ('teacher', 'evaluation_content', 'data_sources', 'evaluation_count', 'created_at')
+
+    def save_instance(self, instance, is_create, row, **kwargs):
+        try:
+            super().save_instance(instance, is_create, row, **kwargs)
+        except IntegrityError:
+            pass
+
+
+@admin.register(TeacherEvaluation)
+class TeacherEvaluationAdmin(ImportExportModelAdmin):
+    list_display = ('id', 'teacher', 'get_evaluation_summary', 'data_sources', 'evaluation_count', 'created_at')
+    list_filter = ('data_sources', 'evaluation_count', 'created_at')
+    search_fields = ('teacher__name', 'evaluation_content')
+    search_help_text = '输入教师姓名或评价内容'
+    autocomplete_fields = ('teacher',)
+    resource_class = TeacherEvaluationResource
+    readonly_fields = ('created_at', 'updated_at')
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related('teacher')

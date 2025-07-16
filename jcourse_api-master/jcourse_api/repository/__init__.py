@@ -34,8 +34,12 @@ def get_reviews(user: User):
 
 
 def get_enrolled_courses(user: User):
+    if not user.is_authenticated:
+        return EnrollCourse.objects.none()
     return EnrollCourse.objects.filter(user=user).values('semester_id', 'course_id')
 
 
 def get_my_reviewed(user: User):
+    if not user.is_authenticated:
+        return Review.objects.none()
     return Review.objects.filter(user=user).values('course_id', 'semester_id', 'id')

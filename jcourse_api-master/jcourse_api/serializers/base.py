@@ -1,13 +1,35 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
 
-from jcourse_api.models import Teacher, Semester, Announcement, Report, Notification, Category, Department, UserPoint
+from jcourse_api.models import Teacher, Semester, Announcement, Report, Notification, Category, Department, UserPoint, TeacherEvaluation
+
+
+class TeacherEvaluationSerializer(serializers.ModelSerializer):
+    """教师评价序列化器"""
+    teacher_name = serializers.CharField(source='teacher.name', read_only=True)
+    evaluation_summary = serializers.SerializerMethodField()
+
+    class Meta:
+        model = TeacherEvaluation
+        fields = ('id', 'teacher_name', 'evaluation_content', 'evaluation_summary',
+                 'data_sources', 'evaluation_count', 'created_at')
+
+    def get_evaluation_summary(self, obj):
+        """获取评价摘要"""
+        return obj.get_evaluation_summary()
 
 
 class TeacherSerializer(serializers.ModelSerializer):
+    evaluations = TeacherEvaluationSerializer(many=True, read_only=True)
+    evaluation_count = serializers.SerializerMethodField()
+
     class Meta:
         model = Teacher
-        fields = ('tid', 'name')
+        fields = ('id', 'tid', 'name', 'department', 'title', 'evaluations', 'evaluation_count')
+
+    def get_evaluation_count(self, obj):
+        """获取教师评价数量"""
+        return obj.evaluations.count()
 
 
 class SemesterSerializer(serializers.ModelSerializer):

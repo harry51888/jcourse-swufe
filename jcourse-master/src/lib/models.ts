@@ -6,8 +6,21 @@ export type PaginationApiResult<Type> = {
 };
 
 export type Teacher = {
+  id?: number;
   tid: string | null;
   name: string;
+  department?: string | null;
+  title?: string | null;
+};
+
+export type TeacherEvaluation = {
+  id: number;
+  teacher_name: string;
+  evaluation_content: string;
+  evaluation_summary: string;
+  data_sources: string;
+  evaluation_count: number;
+  created_at: string;
 };
 
 export type CourseListItem = {

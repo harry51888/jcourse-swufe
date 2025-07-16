@@ -3,6 +3,7 @@ from rest_framework.routers import DefaultRouter
 
 from jcourse_api.views import *
 from jcourse_api.views.common import get_common_info
+from jcourse_api.views.teacher_evaluation import TeacherEvaluationViewSet, TeacherWithEvaluationViewSet
 
 router = DefaultRouter()
 router.register('course', CourseViewSet, basename='course')
@@ -14,6 +15,8 @@ router.register('search', SearchViewSet, basename='search')
 router.register('lesson', EnrollCourseViewSet, basename='lesson')
 router.register('report', ReportViewSet, basename='report')
 router.register('notification', NotificationViewSet, basename='notification')
+router.register('teacher-evaluation', TeacherEvaluationViewSet, basename='teacher-evaluation')
+router.register('teacher', TeacherWithEvaluationViewSet, basename='teacher')
 
 
 urlpatterns = [

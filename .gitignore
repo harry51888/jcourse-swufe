@@ -141,4 +141,23 @@ venv.bak/
 # mypy
 .mypy_cache/
 .dmypy.json
-dmypy.json 
+dmypy.json
+
+# 项目特定忽略
+jcourse_api-master/backend.log
+jcourse_api-master/backend.pid
+jcourse-master/frontend.log
+jcourse-master/frontend.pid
+
+# 脚本生成的文件
+jcourse_api-master/create_helper_users.py
+jcourse_api-master/split_reviews.py
+jcourse_api-master/split_merged_reviews.py
+
+# Next.js
+jcourse-master/.next/
+jcourse-master/out/
+jcourse-master/.env.local
+jcourse-master/.env.development.local
+jcourse-master/.env.test.local
+jcourse-master/.env.production.local 

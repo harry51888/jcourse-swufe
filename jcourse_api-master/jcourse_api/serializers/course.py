@@ -52,7 +52,7 @@ class CourseSerializer(serializers.ModelSerializer):
 
     def get_notification_level(self, obj):
         request = self.context.get("request")
-        if request and hasattr(request, "user"):
+        if request and hasattr(request, "user") and request.user.is_authenticated:
             try:
                 return CourseNotificationLevel.objects.get(user=request.user, course_id=obj.id).notification_level
             except CourseNotificationLevel.DoesNotExist:

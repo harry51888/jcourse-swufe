@@ -1,78 +1,55 @@
-/Users/zousirui/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+/Users/zousirui/编程/Jcourse-stable/jcourse_api-master/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
   warnings.warn(
 Building prefix dict from the default dictionary ...
 Loading model from cache /var/folders/ln/hlrhlb2x7k9bzrh3gbyhqyrw0000gn/T/jieba.cache
 Loading model cost 0.302 seconds.
 Prefix dict has been built successfully.
-/Users/zousirui/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+/Users/zousirui/编程/Jcourse-stable/jcourse_api-master/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
   warnings.warn(
 Building prefix dict from the default dictionary ...
 Loading model from cache /var/folders/ln/hlrhlb2x7k9bzrh3gbyhqyrw0000gn/T/jieba.cache
 Loading model cost 0.302 seconds.
 Prefix dict has been built successfully.
 Watching for file changes with StatReloader
-[13/Jul/2025 12:24:15] "GET /api/review/?page=1&size=20 HTTP/1.1" 200 52
-[13/Jul/2025 12:24:15] "GET /api/common/ HTTP/1.1" 200 280
-[13/Jul/2025 12:24:16] "GET /api/review/?page=1&size=20&notification_level=1 HTTP/1.1" 200 52
-[13/Jul/2025 12:24:17] "GET /api/course-filter/ HTTP/1.1" 200 1755
-[13/Jul/2025 12:24:17] "GET /api/course/?page=1&size=20 HTTP/1.1" 200 3600
-[13/Jul/2025 12:24:22] "GET /oauth/logout/ HTTP/1.1" 200 38
+Not Found: /api/common/info
+[16/Jul/2025 16:30:26] "GET /api/common/info HTTP/1.1" 404 34746
+[16/Jul/2025 16:30:36] "GET /api/common/ HTTP/1.1" 200 279
 Forbidden: /api/review/
-[13/Jul/2025 12:24:25] "GET /api/review/?page=1&size=20 HTTP/1.1" 403 43
-Forbidden: /api/common/
-[13/Jul/2025 12:24:25] "GET /api/common/ HTTP/1.1" 403 43
-Forbidden: /api/common/
-[13/Jul/2025 12:24:29] "GET /api/common/ HTTP/1.1" 403 43
+[16/Jul/2025 16:30:44] "GET /api/review/ HTTP/1.1" 403 43
 Forbidden: /api/review/
-[13/Jul/2025 12:24:29] "GET /api/review/?page=1&size=20 HTTP/1.1" 403 43
-/Users/zousirui/Library/Python/3.9/lib/python/site-packages/django/core/cache/backends/base.py:117: CacheKeyWarning: Cache key contains characters that will cause errors if used with memcached: ':1:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36_::1'
-  warnings.warn(warning, CacheKeyWarning)
-[13/Jul/2025 12:24:42] "POST /oauth/login/ HTTP/1.1" 200 20
-[13/Jul/2025 12:24:42] "GET /api/common/ HTTP/1.1" 200 280
-[13/Jul/2025 12:24:42] "GET /api/review/?page=1&size=20 HTTP/1.1" 200 52
-[13/Jul/2025 12:24:43] "GET /api/course-filter/ HTTP/1.1" 200 1755
-[13/Jul/2025 12:24:43] "GET /api/course/?page=1&size=20 HTTP/1.1" 200 3600
-[13/Jul/2025 12:24:46] "GET /admin/auth/user/1/change/ HTTP/1.1" 200 45262
-[13/Jul/2025 12:24:47] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/core.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /admin/jsi18n/ HTTP/1.1" 200 8560
-[13/Jul/2025 12:24:47] "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 304 0
-[13/Jul/2025 12:24:47] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
-[13/Jul/2025 12:24:49] "GET /admin HTTP/1.1" 301 0
-[13/Jul/2025 12:24:49] "GET /admin/ HTTP/1.1" 200 27948
-[13/Jul/2025 12:24:49] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
-[13/Jul/2025 12:24:49] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
-[13/Jul/2025 12:24:52] "GET /admin/auth/user/add/ HTTP/1.1" 200 29977
-[13/Jul/2025 12:24:53] "GET /admin/jsi18n/ HTTP/1.1" 200 8560
-[13/Jul/2025 12:24:53] "GET /api/lesson/ HTTP/1.1" 200 2
-[13/Jul/2025 12:24:53] "GET /api/common/ HTTP/1.1" 200 280
-[13/Jul/2025 12:24:55] "GET /oauth/logout/ HTTP/1.1" 200 38
-Forbidden: /api/common/
-[13/Jul/2025 12:25:00] "GET /api/common/ HTTP/1.1" 403 43
-Forbidden: /api/common/
-[13/Jul/2025 12:25:02] "GET /api/common/ HTTP/1.1" 403 43
-Forbidden: /api/common/
-[13/Jul/2025 12:25:02] "GET /api/common/ HTTP/1.1" 403 43
-Bad Request: /oauth/email/login/
-[13/Jul/2025 12:25:04] "POST /oauth/email/login/ HTTP/1.1" 400 68
-[13/Jul/2025 12:25:06] "POST /oauth/login/ HTTP/1.1" 200 20
-[13/Jul/2025 12:25:06] "GET /api/common/ HTTP/1.1" 200 280
+[16/Jul/2025 16:31:04] "GET /api/review/?page=1&size=20 HTTP/1.1" 403 43
+[16/Jul/2025 16:31:04] "GET /api/common/ HTTP/1.1" 200 279
+[16/Jul/2025 16:31:06] "GET /api/course-filter/ HTTP/1.1" 200 2522
+[16/Jul/2025 16:31:06] "GET /api/course/?page=1&size=20 HTTP/1.1" 200 3961
+[16/Jul/2025 16:31:08] "GET /api/course/?onlyhasreviews=avg&page=1&size=20 HTTP/1.1" 200 4252
+[16/Jul/2025 16:31:11] "GET /api/course/3779/review/?page=1&size=20 HTTP/1.1" 200 297
+[16/Jul/2025 16:31:11] "GET /api/review-filter/?course_id=3779 HTTP/1.1" 200 100
+[16/Jul/2025 16:31:11] "GET /api/course/3779/ HTTP/1.1" 200 1896
+[16/Jul/2025 16:31:13] "GET /api/course-filter/ HTTP/1.1" 200 2522
+[16/Jul/2025 16:31:13] "GET /api/course/?onlyhasreviews=avg&page=1&size=20 HTTP/1.1" 200 4252
+[16/Jul/2025 16:31:14] "GET /api/course/3441/review/?page=1&size=20 HTTP/1.1" 200 392
+[16/Jul/2025 16:31:14] "GET /api/review-filter/?course_id=3441 HTTP/1.1" 200 100
+[16/Jul/2025 16:31:14] "GET /api/course/3441/ HTTP/1.1" 200 606
+[16/Jul/2025 16:31:22] "GET /api/course-filter/ HTTP/1.1" 200 2522
+[16/Jul/2025 16:31:22] "GET /api/course/?onlyhasreviews=avg&page=1&size=20 HTTP/1.1" 200 4252
+[16/Jul/2025 16:31:24] "GET /api/review-filter/?course_id=3809 HTTP/1.1" 200 100
+[16/Jul/2025 16:31:24] "GET /api/course/3809/review/?page=1&size=20 HTTP/1.1" 200 909
+[16/Jul/2025 16:31:24] "GET /api/course/3809/ HTTP/1.1" 200 2046
+[16/Jul/2025 16:38:27] "GET /api/common/ HTTP/1.1" 200 279
+[16/Jul/2025 16:38:28] "GET /api/review-filter/?course_id=3809 HTTP/1.1" 200 100
+[16/Jul/2025 16:38:28] "GET /api/course/3809/review/?page=1&size=20 HTTP/1.1" 200 1777
+[16/Jul/2025 16:38:28] "GET /api/course/3809/ HTTP/1.1" 200 2046
+[16/Jul/2025 16:38:33] "GET /api/course-filter/ HTTP/1.1" 200 2522
+[16/Jul/2025 16:38:33] "GET /api/course/?page=1&size=20 HTTP/1.1" 200 3961
+[16/Jul/2025 16:38:35] "GET /api/course/?onlyhasreviews=avg&page=1&size=20 HTTP/1.1" 200 4159
+[16/Jul/2025 16:38:39] "GET /api/course/?onlyhasreviews=avg&page=3&size=20 HTTP/1.1" 200 4236
+[16/Jul/2025 16:38:42] "GET /api/review-filter/?course_id=6714 HTTP/1.1" 200 100
+[16/Jul/2025 16:38:42] "GET /api/course/6714/review/?page=1&size=20 HTTP/1.1" 200 840
+[16/Jul/2025 16:38:42] "GET /api/course/6714/ HTTP/1.1" 200 606
+[16/Jul/2025 16:38:49] "GET /api/course/4109/review/?page=1&size=20 HTTP/1.1" 200 52
+[16/Jul/2025 16:38:49] "GET /api/review-filter/?course_id=4109 HTTP/1.1" 200 29
+[16/Jul/2025 16:38:49] "GET /api/course/4109/ HTTP/1.1" 200 1064
+[16/Jul/2025 16:39:05] "GET /api/search/?q=%E7%8E%8B%E5%B8%9D&page=1&size=20 HTTP/1.1" 200 639
+[16/Jul/2025 16:39:08] "GET /api/course/4249/review/?page=1&size=20 HTTP/1.1" 200 52
+[16/Jul/2025 16:39:08] "GET /api/review-filter/?course_id=4249 HTTP/1.1" 200 29
+[16/Jul/2025 16:39:08] "GET /api/course/4249/ HTTP/1.1" 200 2196

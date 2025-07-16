@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 from jcourse_api.models import Department, Semester
 
@@ -79,3 +80,62 @@ class Course(models.Model):
         return ','.join(self.categories.all().values_list('name', flat=True))
 
     category_names.short_description = '类别'
+
+
+class TeacherEvaluation(models.Model):
+    """教师评价模型"""
+    class Meta:
+        verbose_name = '教师评价'
+        verbose_name_plural = verbose_name
+        ordering = ['-created_at']
+        constraints = [
+            models.UniqueConstraint(fields=['teacher', 'source_data'], name='unique_teacher_evaluation')
+        ]
+
+    teacher = models.ForeignKey(
+        Teacher,
+        on_delete=models.CASCADE,
+        verbose_name='教师',
+        db_index=True,
+        related_name='evaluations'
+    )
+    evaluation_content = models.TextField(
+        verbose_name='评价内容',
+        help_text='学生对教师的评价内容'
+    )
+    data_sources = models.CharField(
+        verbose_name='数据来源',
+        max_length=100,
+        help_text='数据来源标识，如data-1,data-2'
+    )
+    evaluation_count = models.IntegerField(
+        verbose_name='评价条数',
+        default=1,
+        help_text='该教师的评价条数'
+    )
+    source_data = models.CharField(
+        verbose_name='原始数据标识',
+        max_length=255,
+        help_text='用于去重的原始数据标识',
+        db_index=True
+    )
+    created_at = models.DateTimeField(
+        verbose_name='创建时间',
+        default=timezone.now,
+        db_index=True
+    )
+    updated_at = models.DateTimeField(
+        verbose_name='更新时间',
+        auto_now=True
+    )
+
+    def __str__(self):
+        return f"{self.teacher.name} - {self.evaluation_content[:50]}..."
+
+    def get_evaluation_summary(self):
+        """获取评价摘要"""
+        if len(self.evaluation_content) > 100:
+            return self.evaluation_content[:100] + "..."
+        return self.evaluation_content
+
+    get_evaluation_summary.short_description = '评价摘要'

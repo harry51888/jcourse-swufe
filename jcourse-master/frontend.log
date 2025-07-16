@@ -6,16 +6,10 @@
   - Local:        http://localhost:3000
   - Environments: .env.local
 
- ✓ Ready in 1934ms
-Browserslist: caniuse-lite is outdated. Please run:
-  npx browserslist@latest --update-db
-  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
- ✓ Compiled /sync in 1435ms (1315 modules)
- ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- ✓ Compiled /latest in 600ms (1617 modules)
-(node:17814) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+ ✓ Ready in 4s
+ ✓ Compiled /latest in 834ms (1388 modules)
+(node:2266) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
- ✓ Compiled /follow-review in 190ms (1621 modules)
- ✓ Compiled /courses in 195ms (1631 modules)
- ✓ Compiled /login in 325ms (1673 modules)
- ✓ Compiled /preference in 204ms (1679 modules)
+ ✓ Compiled /courses in 286ms (1431 modules)
+ ✓ Compiled /course/[id] in 597ms (2173 modules)
+ ✓ Compiled /search in 333ms (2173 modules)

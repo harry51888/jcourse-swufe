@@ -185,7 +185,11 @@ if not BENCHMARK:
         'email_code': '1/minute',
         'verify_auth': '5/minute',
     }
-    REST_FRAMEWORK['DEFAULT_PERMISSION_CLASSES'] = ['rest_framework.permissions.IsAuthenticated']
+    # 在开发环境中允许读取操作无需认证
+    if DEBUG:
+        REST_FRAMEWORK['DEFAULT_PERMISSION_CLASSES'] = ['rest_framework.permissions.IsAuthenticatedOrReadOnly']
+    else:
+        REST_FRAMEWORK['DEFAULT_PERMISSION_CLASSES'] = ['rest_framework.permissions.IsAuthenticated']
 
 
 if DEBUG:

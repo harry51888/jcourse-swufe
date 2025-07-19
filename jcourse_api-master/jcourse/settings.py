@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-chd73zi=3zn63gqmmczye
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get('DEBUG', False))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['101.36.111.202']
 if os.environ.get('ALLOWED_HOSTS', None):
     ALLOWED_HOSTS += os.environ.get('ALLOWED_HOSTS').split(',')
 CSRF_TRUSTED_ORIGINS = []
@@ -109,7 +109,7 @@ DATABASES = {
         'USER': 'jcourse',
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'jcourse'),
         'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
-        'PORT': 5432
+        'PORT': os.environ.get('POSTGRES_PORT', '5432')
     }
 }
 
@@ -200,13 +200,16 @@ if DEBUG:
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'http://localhost:3001',
+    'http://101.36.111.202:3000',
+    'http://101.36.111.202:3001',
 ]
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
-SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = not DEBUG
 SESSION_COOKIE_HTTPONLY = True
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = not DEBUG
 
 HASH_SALT = os.environ.get('HASH_SALT', '')
 

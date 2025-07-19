@@ -29,9 +29,23 @@ def get_or_create_teacher(name):
             return teacher, False
         
         # 如果不存在，创建新教师
+        # 检查名字长度，如果超过64字符的字节长度，则截断
+        original_name = name
+        while len(name.encode('utf-8')) > 64:
+            name = name[:-1]
+        
+        if name != original_name:
+            print(f"⚠️  教师姓名过长，已截断: {original_name} -> {name}")
+        
         # 生成拼音
         name_pinyin = ''.join(lazy_pinyin(name))
         abbr_pinyin = ''.join([i[0] for i in pinyin(name, style=Style.FIRST_LETTER)])
+        
+        # 确保拼音字段也不超过64字符
+        if len(name_pinyin) > 64:
+            name_pinyin = name_pinyin[:64]
+        if len(abbr_pinyin) > 64:
+            abbr_pinyin = abbr_pinyin[:64]
         
         teacher = Teacher.objects.create(
             name=name,

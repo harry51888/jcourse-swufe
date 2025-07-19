@@ -26,9 +26,6 @@ class IsAdminOrReadOnly(CustomBasePermission):
     message = '当前仅管理员可以发表和修改内容。'
 
     def has_permission(self, request, view):
-        if request.user:
-            if request.method in SAFE_METHODS:
-                return True
-            return request.user.is_staff
-        else:
-            return False
+        if request.method in SAFE_METHODS:
+            return True
+        return request.user and request.user.is_staff

@@ -18,7 +18,6 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 import CourseDetailCard from "@/components/course-detail-card";
-import CourseTeacherEvaluations from "@/components/course-teacher-evaluations";
 import PageHeader from "@/components/page-header";
 import RelatedCard from "@/components/related-card";
 import ReviewFilter from "@/components/review-filter";
